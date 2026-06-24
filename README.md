@@ -156,40 +156,5 @@ smartgrid_ai/
 
 ---
 
-## Resume Bullet Points
 
-- Designed and deployed a real-time energy anomaly detection platform processing 50,000+ 
-  smart meter readings/second using Python, TimescaleDB, and ML ensemble models achieving 
-  89% theft detection precision
-- Engineered a hybrid LSTM + MATLAB ARIMA demand forecasting pipeline with MAPE < 3.5% 
-  across 7-day horizons, reducing procurement costs by $2.3M annually for a 500k-customer grid
-- Built a MATLAB quadratic programming load balancer that reduced peak-to-average ratio by 
-  18% and deferred $4M in infrastructure capex
-- Implemented FFT-based signal processing in MATLAB to detect harmonic distortion patterns 
-  indicative of meter tampering with 92% recall
-- Architected a multi-module Python ETL pipeline using Pandas and NumPy processing 200GB/day 
-  of SCADA telemetry with <0.01% data loss SLA
 
----
-
-## Deployment Options
-
-1. **Local Dev**: Docker Compose (all services)
-2. **Staging**: AWS ECS Fargate + RDS PostgreSQL + ElastiCache Redis
-3. **Production**: GCP Cloud Run + Cloud SQL + Memorystore
-4. **On-Premise**: Kubernetes (K8s) + bare-metal PostgreSQL
-
----
-
-## Interview Questions
-
-1. How does TimescaleDB differ from standard PostgreSQL for time-series workloads?
-2. Why Isolation Forest for anomaly detection vs. DBSCAN or One-Class SVM?
-3. Explain the trade-offs between LSTM and ARIMA for energy forecasting.
-4. How do you handle concept drift in the anomaly detection model over time?
-5. What is the curse of dimensionality and how does feature engineering mitigate it here?
-6. How would you scale this to 100M endpoints without changing the core architecture?
-7. Describe your train/validation/test split strategy for time-series data.
-8. Why did you choose quadratic programming for load optimization?
-9. How does FFT reveal meter tampering, and what frequency components do you look for?
-10. What security controls prevent injection attacks on your FastAPI endpoints?
